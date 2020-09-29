@@ -1,3 +1,4 @@
+from functools import reduce
 from typing import List
 from dataclasses import dataclass
 from item import Item
@@ -8,6 +9,4 @@ class Basket(object):
     items: List[Item]
 
     def total(self):
-        if len(self.items) > 0:
-            return self.items[0].unit_price
-        return 0
+        return reduce(lambda subtotal, item: subtotal + item.unit_price, self.items, 0)

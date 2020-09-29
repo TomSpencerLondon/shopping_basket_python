@@ -12,5 +12,9 @@ class ShoppingBasketTest(unittest.TestCase):
         basket = Basket([Item(100.0, 1)])
         self.assertEqual(basket.total(), 100.0)
 
+    def test_two_items_quantity_one(self):
+        basket = Basket([Item(100.0, 1), Item(100.0, 1)])
+        self.assertEqual(basket.total(), 200)
+
 if __name__ == '__main__':
     pass
