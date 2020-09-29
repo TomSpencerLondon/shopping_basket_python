@@ -1,7 +1,7 @@
 import unittest
-from dataclasses import dataclass
 
 from shopping_basket import Basket
+from dataclasses import dataclass
 
 @dataclass
 class Item(object):
