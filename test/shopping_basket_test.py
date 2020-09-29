@@ -1,13 +1,7 @@
 import unittest
 
 from shopping_basket import Basket
-from dataclasses import dataclass
-
-@dataclass
-class Item(object):
-    unit_price: float
-    quantity: 1
-
+from item import Item
 
 class ShoppingBasketTest(unittest.TestCase):
     def test_empty_basket_total(self):
