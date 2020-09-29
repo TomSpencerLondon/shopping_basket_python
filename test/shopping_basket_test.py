@@ -1,15 +1,5 @@
 import unittest
-from dataclasses import dataclass
-from typing import List
-
-
-@dataclass
-class Basket(object):
-    items: List
-
-    def total(self):
-        return 0
-
+from shopping_basket import Basket
 
 class ShoppingBasketTest(unittest.TestCase):
     def test_empty_basket_total(self):
